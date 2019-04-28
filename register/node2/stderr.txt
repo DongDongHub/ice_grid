@@ -1,0 +1,21 @@
+Network.cpp:2041: Ice::SocketException:
+socket exception: Address already in use
+Network.cpp:2041: Ice::SocketException:
+socket exception: Address already in use
+Network.cpp:2041: Ice::SocketException:
+socket exception: Address already in use
+Network.cpp:2041: Ice::SocketException:
+socket exception: Address already in use
+Network.cpp:2041: Ice::SocketException:
+socket exception: Address already in use
+Network.cpp:2041: Ice::SocketException:
+socket exception: Address already in use
+terminate called without an active exception
+-! 04/28/19 10:54:46.021 icegridnode: warning: exception occurred while deactivating `TestServer2' using process proxy:
+   Network.cpp:2357: Ice::ConnectionRefusedException:
+   connection refused: Connection refused
+terminate called without an active exception
+terminate called without an active exception
+terminate called without an active exception
+terminate called without an active exception
+terminate called without an active exception

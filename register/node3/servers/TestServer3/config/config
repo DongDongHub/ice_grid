@@ -1,0 +1,10 @@
+# Configuration file (04/28/19 08:52:38.840)
+
+# Server configuration
+Ice.Admin.ServerId=TestServer3
+Ice.Admin.Endpoints=tcp -h localhost
+Ice.ProgramName=TestServer3
+# Object adapter SimplePrinterAdapter
+SimplePrinterAdapter.Endpoints=tcp
+SimplePrinterAdapter.AdapterId=TestServer3.SimplePrinterAdapter
+Ice.Default.Locator=IceGrid/Locator:tcp -p 4061

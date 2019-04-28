@@ -1,0 +1,35 @@
+<icegrid>
+    <application name="Test">
+	<replica-group id="ReplicatedSimplePrinterAdapter">
+	    <load-balancing type="round-robin"/>
+            <object identity="SimplePrinter" type="::mdds::idds"/>
+        </replica-group>
+
+	<server-template id="TestServerTemplate">
+            <parameter name="index"/>
+            <server id="TestServer${index}" exe="/home/vagrant/project/ice/ice_grid/server" activation="always">
+                <adapter name="SimplePrinterAdapter" endpoints="tcp" replica-group="ReplicatedSimplePrinterAdapter"/>
+            </server>
+        </server-template>
+        <node name="Node1">
+	     <server-instance template="TestServerTemplate" index="1"/>
+        </node>
+        <node name="Node2">
+	     <server-instance template="TestServerTemplate" index="2"/>
+        </node>
+<!--            <server id="TestServer" exe="/home/vagrant/project/ice/ice_grid/server" activation="on-demand">
+                <adapter name="SimplePrinterAdapter"  endpoints="tcp">
+		    <object identity="SimplePrinter" type="::mdds::idds"/>
+		</adapter>
+            </server>
+        </node>
+        <node name="Node2">
+            <server id="TestServer2" exe="/home/vagrant/project/ice/ice_grid/server" activation="on-demand">
+                <adapter name="SimplePrinterAdapter"  endpoints="tcp">
+		    <object identity="SimplePrinter2" type="::mdds::idds"/>
+		</adapter>
+            </server>
+        </node>
+-->
+    </application>
+</icegrid>

@@ -80,8 +80,9 @@ main(int argc, char* argv[])
     Ice::CommunicatorPtr ic;
     try {
         ic = Ice::initialize(argc, argv);
-        Ice::ObjectAdapterPtr adapter =
-            ic->createObjectAdapter("SimplePrinterAdapter");
+        //Ice::ObjectAdapterPtr adapter = ic->createObjectAdapterWithEndpoints("SimplePrinterAdapter");
+        Ice::ObjectAdapterPtr adapter = ic->createObjectAdapter("SimplePrinterAdapter");
+					    
 	TestI* testiPtr = new TestI();
         Ice::ObjectPtr object = testiPtr;
 	thread t1 ( [&testiPtr](){

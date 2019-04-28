@@ -1,0 +1,19 @@
+<icegrid>
+    <application name="Test">
+        <node name="Node1">
+            <server id="TestServer" exe="/home/vagrant/project/ice/ice_grid/server" activation="on-demand">
+                <adapter name="SimplePrinterAdapter"  endpoints="tcp"/>
+            </server>
+        </node>
+        <node name="Node2">
+            <server id="TestServer2" exe="/home/vagrant/project/ice/ice_grid/server" activation="on-demand">
+                <adapter name="SimplePrinterAdapter"  endpoints="tcp"/>
+            </server>
+        </node>
+        <node name="Node3">
+            <server id="TestServer3" exe="/home/vagrant/project/ice/ice_grid/server" activation="on-demand">
+                <adapter name="SimplePrinterAdapter"  endpoints="tcp"/>
+            </server>
+        </node>
+    </application>
+</icegrid>
